@@ -1,0 +1,257 @@
+<div class="container" style="background-color:teal">
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <form
+          [formGroup]="userForm"
+          class="form-horizontal"
+          role="form"
+          (ngSubmit)="Save(userForm.value)"
+        >
+          <div class="form-group">
+            <legend>ReactiveForm</legend>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">FirstName</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your FirstName"
+                class="form-control"
+                formControlName="FirstName"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">LastName</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your LastName"
+                class="form-control"
+                formControlName="LastName"
+              />
+            </div>
+          </div>
+  
+          <!-- <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Gender</label>
+            <br />
+            <label for="input" class="col-sm-2 form-check-label">Male </label>
+            <input
+              type="radio"
+              class="form-check-input"
+              name="Gender"
+              formControlName="Gender"
+            />
+            <label for="input" class="col-sm-2 form-check-label">Female </label>
+  
+            <input
+              type="radio"
+              class="form-check-input"
+              name="Gender"
+              formControlName="Gender"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">DOB</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your Date of Birth"
+                class="form-control"
+                formControlName="DOB"
+              />
+            </div>
+          </div> -->
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">MobileNo</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your Mobile Number"
+                class="form-control"
+                formControlName="MobileNo"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">email</label>
+            <div class="col-sm-10">
+              <input
+                type="email"
+                placeholder="enter your EmailId"
+                class="form-control"
+                formControlName="EmailId"
+              />
+            </div>
+          </div>
+  
+          <!-- <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">FlatNo</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your EmailId"
+                class="form-control"
+                formControlName="FlatNo"
+              />
+            </div>
+          </div> -->
+  
+          <!-- <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">WingNo</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your EmailId"
+                class="form-control"
+                formControlName="WingNo"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your Address"
+                class="form-control"
+                formControlName="Address"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label"
+              >MaritalStatus</label
+            >
+            <br />
+            <label for="input" class="col-sm-2 form-check-label">Married </label>
+            <input
+              type="radio"
+              class="form-check-input"
+              name="MaritalStatus"
+              formControlName="MaritalStatus"
+            />
+            <label for="input" class="col-sm-2 form-check-label">Single </label>
+  
+            <input
+              type="radio"
+              class="form-check-input"
+              name="MaritalStatus"
+              formControlName="MaritalStatus"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">FamilyCount</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your FamilyCount"
+                class="form-control"
+                formControlName="FamilyCount"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Education</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your Education"
+                class="form-control"
+                formControlName="Education"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Occupation</label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your Occupation"
+                class="form-control"
+                formControlName="Occupation"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label"
+              >AnniversaryDate</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                placeholder="enter your AnniversaryDate"
+                class="form-control"
+                formControlName="AnniversaryDate"
+              />
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">ProfilePic</label>
+            <div class="col-sm-10">
+              <input
+                type="file"
+                name="ProfilePic"
+                id="inpProfilePic"
+                class="form-control"
+                formControlName="ProfilePic"
+              />
+            </div>
+          </div> -->
+  
+          <div formGroupName="UserLogin">
+            <label class="col-sm-2 control-label">UserLogin</label>
+            <hr />
+            <div class="form-group">
+              <label for="input" class="col-sm-2 control-label">UserName</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  placeholder="enter your UserName"
+                  class="form-control"
+                  formControlName="UserName"
+                />
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="input" class="col-sm-2 control-label">password</label>
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  placeholder="enter your password"
+                  class="form-control"
+                  formControlName="Password"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button
+                type="submit"
+                class="btn 
+                              btn-primary"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

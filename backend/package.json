@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Express and node packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harrish15",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}

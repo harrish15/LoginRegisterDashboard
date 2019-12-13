@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <form [formGroup]="Login" (ngSubmit)="LoginUser(Login.value)">
+        <div class="form-group row" formGroupName="UserLogin">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Username"
+            formControlName="UserName"
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="
+              Login.controls.UserLogin.controls.UserName.hasError('required') &&
+              Login.controls.UserLogin.controls.UserName.touched
+            "
+          >
+            UserName is Required*
+          </div>
+        </div>
+        <div class="form-group row" formGroupName="UserLogin">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter Password"
+            formControlName="Password"
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="
+              Login.controls.UserLogin.controls.Password.hasError('required') &&
+              Login.controls.UserLogin.controls.Password.touched
+            "
+          >
+            Password is required*
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="offset-sm-2 col-sm-10">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!Login.valid"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+      <p>If new user then please register</p>
+      <a routerLink="/register">Register</a>
+    </div>
+  </div>
+</div>
