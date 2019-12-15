@@ -6,10 +6,9 @@ import { Observable } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class LoginRegisterServices {
-  private loginEndpoint: string =
-    "http://mobile.test.acorsociety.com/ideators/api/users/userloginasync";
+  private loginEndpoint: string = "http://localhost:4003/api/user";
   private postsUserRegistrationUrl: string =
-    "http://mobile.test.acorsociety.com/ideators/api/users/userregistrationasync";
+    "http://localhost:4003/api/auth/newUser";
 
   public headers: HttpHeaders;
   constructor(private http: HttpClient) {
@@ -22,7 +21,7 @@ export class LoginRegisterServices {
       headers: this.headers
     });
   }
-  postUserRegistration(data): Observable<Iregistration> {
+  postUserRegistration(data: Iregistration): Observable<Iregistration> {
     console.log(data);
     // let userData = JSON.stringify(data);
     return this.http.post<Iregistration>(this.postsUserRegistrationUrl, data, {

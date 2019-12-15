@@ -36,17 +36,15 @@ export class RegisterComponent implements OnInit {
       return;
     }
     console.log(data);
-    this.userData = JSON.stringify(data);
-    this.lr
-      .postUserRegistration(this.userData)
-      .subscribe((item: Iregistration) => {
-        console.log(item);
-        let response: any = item;
-        if (response == true) {
-          this.router.navigateByUrl("/user-login");
-        } else if (response.Error != undefined) {
-          alert(response.Error);
-        }
-      });
+    // this.userData = JSON.stringify(data);
+    this.lr.postUserRegistration(data).subscribe((item: Iregistration) => {
+      console.log(item);
+      let response: any = item;
+      if (response == true) {
+        this.router.navigateByUrl("/login");
+      } else if (response.Error != undefined) {
+        alert(response.Error);
+      }
+    });
   }
 }
