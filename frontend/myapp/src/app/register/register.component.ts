@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
     this.lr.postUserRegistration(data).subscribe((item: Iregistration) => {
       console.log(item);
       let response: any = item;
-      if (response == true) {
+      if (response.message == "registration successful") {
         this.router.navigateByUrl("/login");
       } else if (response.Error != undefined) {
         alert(response.Error);

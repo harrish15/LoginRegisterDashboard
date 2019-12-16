@@ -9,7 +9,7 @@ let userSchema = new mongoose.Schema({
   MobileNo: { type: String, required: true, minlength: 10, maxlength: 10 },
   UserLogin: {
     UserName: { type: String, required: true, minlength: 3, maxlength: 30 },
-    Password: { type: String, required: true, minlength: 3, maxlength: 30 }
+    Password: { type: String, required: true, minlength: 3, maxlength: 100 }
   },
   EmailId: { type: String, required: true, minlength: 3, maxlength: 30 }
 });
@@ -48,7 +48,7 @@ function ValidationError(message) {
         .string()
         .required()
         .min(3)
-        .max(30)
+        .max(100)
     },
     EmailId: joi
       .string()
@@ -71,7 +71,7 @@ function LoginValidationError(message) {
         .string()
         .required()
         .min(3)
-        .max(30)
+        .max(100)
     }
   });
   return Schema.validate(message);
