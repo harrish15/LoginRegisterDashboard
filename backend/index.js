@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 if (config.get("host.mail") === "development mode") {
   app.use(morgan("tiny"));
 }
+if (!config.get("usertoken")) {
+  console.log(`Fatal error.Please set the token.`);
+  process.exit(1);
+}
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
