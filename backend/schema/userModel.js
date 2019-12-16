@@ -60,7 +60,7 @@ function ValidationError(message) {
 }
 
 function LoginValidationError(message) {
-  let Schema = joi.object().keys({
+  let LoginSchema = joi.object().keys({
     UserLogin: {
       UserName: joi
         .string()
@@ -74,7 +74,7 @@ function LoginValidationError(message) {
         .max(100)
     }
   });
-  return Schema.validate(message);
+  return LoginSchema.validate(message);
 }
 
 module.exports = { userModel, ValidationError, LoginValidationError };

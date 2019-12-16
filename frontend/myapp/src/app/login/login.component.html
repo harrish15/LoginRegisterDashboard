@@ -2,13 +2,16 @@
   <div class="row">
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
       <form [formGroup]="Login" (ngSubmit)="LoginUser(Login.value)">
-        <div class="form-group row" formGroupName="UserLogin">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter Username"
-            formControlName="UserName"
-          />
+        <div class="form-group" formGroupName="UserLogin">
+          <label for="input" class="col-sm-2 control-label">UserName</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Username"
+              formControlName="UserName"
+            />
+          </div>
           <div
             class="alert alert-danger"
             *ngIf="
@@ -19,13 +22,16 @@
             UserName is Required*
           </div>
         </div>
-        <div class="form-group row" formGroupName="UserLogin">
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Enter Password"
-            formControlName="Password"
-          />
+        <div class="form-group" formGroupName="UserLogin">
+          <label for="input" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter Password"
+              formControlName="Password"
+            />
+          </div>
           <div
             class="alert alert-danger"
             *ngIf="

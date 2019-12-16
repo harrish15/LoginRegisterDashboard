@@ -27,9 +27,10 @@ export class LoginComponent implements OnInit {
   }
   LoginUser(data: Ilogin) {
     console.log(data);
-    this.loginServices.postuserLogin(data).subscribe(item => {
+    this.loginServices.postuserLogin(data).subscribe((item: Ilogin) => {
+      let response: any = item;
+      localStorage.setItem("token", response.token);
       alert("Login Successful");
-      console.log(item);
       this.router.navigateByUrl("/dashboard");
     });
   }

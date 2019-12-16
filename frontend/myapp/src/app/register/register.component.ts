@@ -41,6 +41,8 @@ export class RegisterComponent implements OnInit {
       console.log(item);
       let response: any = item;
       if (response.message == "registration successful") {
+        localStorage.setItem("x-auth-token", response.token);
+        console.log("registration  "+response.token)
         this.router.navigateByUrl("/login");
       } else if (response.Error != undefined) {
         alert(response.Error);
